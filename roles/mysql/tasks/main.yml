@@ -18,9 +18,9 @@
 
 - name: Get DB Info credentials
   community.mysql.mysql_info:
-    login_user: root
+    login_user: "root"
     login_password: "ExpenseApp@1"
-    login_host: 172.31.35.208
+    login_host: "172.31.35.208"
     filter: version
   register: mysql_connection_output
   ignore_errors: true
