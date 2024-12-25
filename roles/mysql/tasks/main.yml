@@ -9,12 +9,12 @@
     state: restarted
     enabled: yes
 
-- name: Install Python MySQL Client
-  ansible.builtin.pip:
-    name:
-      - PyMySQL
-      - cryptography
-    executable: pip3.9
+#- name: Install Python MySQL Client
+#  ansible.builtin.pip:
+#    name:
+#      - PyMySQL
+#      - cryptography
+#    executable: pip3.9
 
 - name: Get DB Info credentials
   community.mysql.mysql_info:
