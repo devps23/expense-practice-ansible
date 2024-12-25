@@ -37,10 +37,10 @@
     executable: pip3.9
 
 
-- name: Install MySQL Client
-  ansible.builtin.dnf:
-    name: mysql
-    state: installed
+#- name: Install MySQL Client
+#  ansible.builtin.dnf:
+#    name: mysql
+#    state: installed
 
 - name: Load schema
   community.mysql.mysql_db:
