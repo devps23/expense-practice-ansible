@@ -8,9 +8,14 @@
   when: rsyslog_config_needed | bool and not only_deployment | bool
 
 # added for newrelic to connect with frontend
-- name: Import code commonly
+- name: Import newrelic commonly
   ansible.builtin.import_role:
     name: newrelic
     tasks_from: nginx
+
+- name: Import logstash commonly
+  ansible.builtin.import_role:
+    name: logstash
+    tasks_from: main
 
 

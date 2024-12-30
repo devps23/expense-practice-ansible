@@ -1,1 +1,0 @@
-secret_token: "{{ lookup('hashi_vault', 'secret=common/data/common token=hvs.fMGVYmkvteLqprw3itd1iXUe url=https://vault-internal.pdevops72.online }}"
