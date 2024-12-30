@@ -13,11 +13,11 @@
     name: common
     tasks_from: pre-req.yml
 
-# added for newrelic to connect with frontend
-- name: Import code commonly
-  ansible.builtin.import_role:
-    name: newrelic
-    tasks_from: nginx
+## added for newrelic to connect with frontend
+#- name: Import code commonly
+#  ansible.builtin.import_role:
+#    name: newrelic
+#    tasks_from: nginx
 
 - name: restart nginx service
   ansible.builtin.systemd_service:
