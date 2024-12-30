@@ -1,0 +1,11 @@
+- name: copy backend conf in rsyslog
+  ansible.builtin.template:
+    src: rsyslog.conf
+    dest: /etc/rsyslog.d/rsyslog.conf
+
+
+- name: restart service
+  ansible.builtin.systemd_service:
+    name: rsyslog
+    state: restarted
+
