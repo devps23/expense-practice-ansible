@@ -13,9 +13,9 @@
     name: newrelic
     tasks_from: nginx
 
-- name: Import logstash commonly
-  ansible.builtin.import_role:
-    name: logstash
-    tasks_from: main
+#- name: Import logstash commonly
+#  ansible.builtin.import_role:
+#    name: logstash
+#    tasks_from: main
 
 
