@@ -8,6 +8,11 @@
     name: logstash
     state: installed
 
+- name: pass frontend logs to kibana
+  ansible.builtin.template:
+    src: logstash.conf
+    dest: /etc/conf.d/logstash.conf
+
 - name: restart logstash service
   ansible.builtin.systemd_service:
     name: logstash
