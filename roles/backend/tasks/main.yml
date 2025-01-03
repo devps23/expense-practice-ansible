@@ -57,7 +57,6 @@
     name: all
     target: /app/schema/backend.sql
 
-
 - name: Reload daemon
   ansible.builtin.systemd_service:
     name: backend
