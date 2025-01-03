@@ -35,12 +35,13 @@
     path: /app
     state: latest
 
-#- name: Install Python MySQL Client
-#  ansible.builtin.pip:
-#    name:
-#      - PyMySQL
-#      - cryptography
-#    executable: pip3.9
+- name: Install Python MySQL Client
+  ansible.builtin.pip:
+    name:
+      - PyMySQL
+      - cryptography
+      - pymysql
+    executable: pip3.9
 
 - name: Install MySQL Client
   ansible.builtin.dnf:
