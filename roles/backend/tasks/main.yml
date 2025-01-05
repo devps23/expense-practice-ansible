@@ -52,7 +52,7 @@
   community.mysql.mysql_db:
     login_user: "{{ login_user }}"
     login_password: "{{ login_password }}"
-    login_host: "{{component_name}}.{{env}}.pdevops72.online"
+    login_host: mysql-dev.pdevops72.online
     state: import
     name: all
     target: /app/schema/backend.sql
