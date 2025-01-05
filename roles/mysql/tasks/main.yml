@@ -21,7 +21,7 @@
   community.mysql.mysql_info:
     login_user: "{{ login_user }}"
     login_password: "{{ login_password }}"
-    login_host: 172.31.84.158
+    login_host: mysql
     filter: version
   register: mysql_connection_output
 #  ignore_errors: true
