@@ -51,6 +51,10 @@
       - cryptography
     executable: pip3.9
 
+- name: Install mysql
+  ansible.builtin.dnf:
+    name: mysql
+    state: installed
 - name: Get DB Info credentials
   community.mysql.mysql_info:
     login_user: root
