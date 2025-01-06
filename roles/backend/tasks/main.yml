@@ -12,6 +12,8 @@
 - name: Add application user
   ansible.builtin.user:
     name: "{{app_user}}"
+    owner: "{{app_user}}"
+    group: "{{app_user}}"
 
 - name: Import common code
   ansible.builtin.import_role:
