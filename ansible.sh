@@ -6,7 +6,7 @@ if [ -z  ]; then
     
 fi
 ansible-playbook get-secrets.yml -e vault_token=$vault_token -e component_name=$component -e env=$env
-ansible-playbook -i ${component}-${env}.pdevops72.online, expense.yml -e component_name=$component -e env=$env -e '@~/secrets.json' -e '@~/app.json'
+ansible-playbook -i 172.31.86.1, expense.yml -e component_name=$component -e env=$env -e '@~/secrets.json' -e '@~/app.json'
 rm -f ~/*.json
 
 
