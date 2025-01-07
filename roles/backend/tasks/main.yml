@@ -49,8 +49,8 @@
 
 - name: Load schema
   community.mysql.mysql_db:
-    login_user: "{{login_user}}"
-    login_password: "{{login_password}}"
+    login_user: root
+    login_password: ExpenseApp@1
     login_host: mysql-dev.pdevops72.online
     target: /app/schema/backend.sql
     state: import
@@ -62,3 +62,4 @@
     state: restarted
     enabled: yes
     daemon_reload: true
+# curl -v telnet://172.31.86.1:22
