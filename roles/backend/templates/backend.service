@@ -2,7 +2,7 @@
 Description = Backend Service
 
 [Service]
-User=root
+User=expense
 Environment=DB_HOST="mysql-dev.pdevops72.online"
 ExecStart=/bin/node /app/index.js
 SyslogIdentifier=backend
