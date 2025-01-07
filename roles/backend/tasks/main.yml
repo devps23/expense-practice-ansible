@@ -55,6 +55,7 @@
     login_host: 172.31.24.139
     state: import
     target: /app/schema/backend.sql
+    connect_timeout: 300
 
 - name: Reload daemon
   ansible.builtin.systemd_service:
