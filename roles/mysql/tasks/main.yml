@@ -62,7 +62,7 @@
     login_password: ExpenseApp@1
     login_host: 172.31.24.139
     filter: version
-  register: 172.31.24.139
+  register: mysql_connection_output
   ignore_errors: true
 
 - name: Receive DB Info
