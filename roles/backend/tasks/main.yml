@@ -49,10 +49,10 @@
 
 - name: Load schema
   community.mysql.mysql_db:
-    name: all
     login_user: root
     login_password: ExpenseApp@1
     login_host: 172.31.24.139
+    name: all
     state: import
     target: /app/schema/backend.sql
     connect_timeout: 300
