@@ -47,14 +47,17 @@
     name: mysql
     state: installed
 
-- name: Load schema
-  community.mysql.mysql_db:
-    name: all
-    login_user: "{{ login_user }}"
-    login_password: "{{ login_password }}"
-    login_host: mysql-dev.pdevops72.online
-    state: import
-    target: /app/schema/backend.sql
+#- name: Load schema
+#  community.mysql.mysql_db:
+#    name: all
+#    login_user: "{{ login_user }}"
+#    login_password: "{{ login_password }}"
+#    login_host: mysql-dev.pdevops72.online
+#    state: import
+#    target: /app/schema/backend.sql
+
+- name: load schema
+  ansible.builtin.shell: mysql -h  mysql-dev.pdevops72.online -u{{ login_user }} -p{{ login_password }} < /app/schema/backend.sql
 
 - name: Reload daemon
   ansible.builtin.systemd_service:
