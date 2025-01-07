@@ -29,7 +29,7 @@
 
 - name: Set Root password
   ansible.builtin.shell: mysql_secure_installation --set-{{ login_user }}-pass {{ login_password }}
-  when: mysql_connection_output.failed is true
+  when: mysql_connection_output.failed is false
 
 #{{ mysql_root_password }} here mysql_root_password getting the password from vault
 
