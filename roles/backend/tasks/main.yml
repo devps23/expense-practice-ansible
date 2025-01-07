@@ -49,8 +49,8 @@
 
 - name: Load schema
   community.mysql.mysql_db:
-    login_user: root
-    login_password: ExpenseApp@1
+    login_user: "{{login_user}}"
+    login_password: "{{login_password}}"
     login_host: mysql-dev.pdevops72.online
     target: /app/schema/backend.sql
     state: import
